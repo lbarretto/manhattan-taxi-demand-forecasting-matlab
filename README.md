@@ -171,7 +171,7 @@ Por isso, a avaliação foi além da quantidade total de acertos e passou a cons
 ### 3. A demanda apresenta distribuição desbalanceada
 
 <p align="center">
-  <img width="822" height="532" alt="Image" src="https://github.com/user-attachments/assets/3eaf866a-cae2-4df3-ad2a-fae3f987a7ab" />
+  <img width="722" height="432" alt="Image" src="https://github.com/user-attachments/assets/3eaf866a-cae2-4df3-ad2a-fae3f987a7ab" />
 </p>
 
 A variável `Demanda` foi dividida em três categorias:
