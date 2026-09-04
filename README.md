@@ -57,6 +57,17 @@ O projeto busca responder justamente a essa questão.
 
 ---
 
+### 🗺️ Regiões analisadas
+
+Para representar a distribuição espacial da demanda, as zonas de táxi foram agrupadas
+em seis regiões utilizadas ao longo da análise:
+
+<p align="center">
+  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+</p>
+
+---
+
 ## 💡 Solução / Recomendação
 
 Foram avaliadas duas abordagens para apoiar a estratégia de despacho.
@@ -267,6 +278,10 @@ NetPickups = Pickups - Dropoffs
 
 ### Módulo 02: Criar e avaliar recursos
 
+<p align="center">
+  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+</p>
+
 Neste módulo, os dados preparados são transformados em informações adequadas para a modelagem.
 
 Primeiro, é criada a variável categórica `Demanda`, dividida em três níveis:
@@ -307,6 +322,10 @@ IsHoliday
 
 ### Módulo 03: Aplicar o aprendizado de máquina
 
+<p align="center">
+  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+</p>
+
 Neste módulo, os recursos definidos anteriormente são utilizados para treinar e avaliar os modelos de classificação.
 
 Foram desenvolvidas duas abordagens utilizando os mesmos seis preditores e a mesma variável de resposta:
@@ -335,43 +354,6 @@ Real Alto       6      1      0
 Essa abordagem permite avaliar o modelo não apenas pela quantidade de previsões corretas, mas também pelo impacto relativo dos diferentes erros.
 
 Por fim, os erros mais relevantes são convertidos em **perdas financeiras estimadas**, permitindo comparar as duas abordagens sob uma perspectiva de negócio.
-
----
-
-## 📂 Estrutura do Repositório
-
-A estrutura sugerida para o repositório é:
-
-```text
-manhattan-taxi-demand-forecasting-matlab/
-│
-├── README.md
-│
-├── assets/
-│   └── cover.png
-│
-├── data/
-│   ├── 2015 Bank Holidays.csv
-│   └── Taxi Regions and Zones.csv
-│
-├── src/
-│   ├── addTaxiZones.mlx
-│   ├── basicPreprocessing.mlx
-│   └── importTaxiDataWithoutCleaning.mlx
-│
-├── notebooks/
-│   └── Manhattan Taxi Demand Forecasting.mlx
-│
-├── figures/
-│   ├── demand-distribution.png
-│   ├── predictor-importance.png
-│   ├── confusion-matrix-baseline.png
-│   ├── confusion-matrix-scenario-2.png
-│   └── financial-impact.png
-│
-└── docs/
-    └── project-report.pdf
-```
 
 > A estrutura acima representa a organização recomendada para o repositório. Os nomes e diretórios podem ser ajustados de acordo com a organização final dos arquivos no GitHub.
 
@@ -512,7 +494,7 @@ O objetivo dessas etapas seria aproximar o projeto de uma solução capaz de apo
 
 Engenheiro de Produção | Data Science | Machine Learning | Cloud Computing
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/LucasPBar)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/lbarretto)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 
 ---
