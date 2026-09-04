@@ -1,7 +1,7 @@
 # 🚕 Manhattan Taxi Demand Forecasting
 
 <p align="center">
-  <img src="./assets/cover.png" alt="Manhattan Taxi Demand Forecasting">
+  <img width="1176" height="668" alt="Image" src="https://github.com/user-attachments/assets/c208abe0-c737-4a13-bae9-b141fb199f6d" />
 </p>
 
 <p align="center">
