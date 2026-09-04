@@ -63,7 +63,7 @@ Para representar a distribuição espacial da demanda, as zonas de táxi foram a
 em seis regiões utilizadas ao longo da análise:
 
 <p align="center">
-  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+  <img width="600" height="406" alt="Image" src="https://github.com/user-attachments/assets/2024185b-e327-4f9f-b411-5d1a5cf9fd91" />
 </p>
 
 ---
@@ -169,6 +169,10 @@ A estratégia de despacho determina quais erros são mais prejudiciais e quais p
 Por isso, a avaliação foi além da quantidade total de acertos e passou a considerar o impacto dos diferentes tipos de erro.
 
 ### 3. A demanda apresenta distribuição desbalanceada
+
+<p align="center">
+  <img width="822" height="532" alt="Image" src="https://github.com/user-attachments/assets/3eaf866a-cae2-4df3-ad2a-fae3f987a7ab" />
+</p>
 
 A variável `Demanda` foi dividida em três categorias:
 
@@ -279,7 +283,7 @@ NetPickups = Pickups - Dropoffs
 ### Módulo 02: Criar e avaliar recursos
 
 <p align="center">
-  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+  <img width="556" height="447" alt="Image" src="https://github.com/user-attachments/assets/79bf0a32-12b3-4385-85a9-be2b99498c5a" />
 </p>
 
 Neste módulo, os dados preparados são transformados em informações adequadas para a modelagem.
@@ -323,7 +327,7 @@ IsHoliday
 ### Módulo 03: Aplicar o aprendizado de máquina
 
 <p align="center">
-  <img src="./images/manhattan-regions.png" alt="Regiões analisadas em Manhattan" width="800">
+  <img width="630" height="468" alt="Image" src="https://github.com/user-attachments/assets/e7c7be68-1f7f-444b-8894-6e40a12a285e" />
 </p>
 
 Neste módulo, os recursos definidos anteriormente são utilizados para treinar e avaliar os modelos de classificação.
