@@ -126,7 +126,15 @@ Os valores apresentados representam **estimativas calculadas a partir dos dados 
 
 O modelo baseline do Cenário 1 apresentou **71,71% de acurácia no conjunto de teste**.
 
+<p align="center">
+  <img width="553" height="389" alt="Image" src="https://github.com/user-attachments/assets/8825cce5-ca8f-48c6-9170-af925faf5c57" />
+</p>
+
 O Cenário 2 apresentou uma redução de apenas **0,38 ponto percentual na acurácia geral**, enquanto conseguiu reduzir os erros considerados mais relevantes para a estratégia de despacho.
+
+<p align="center">
+  <img width="564" height="384" alt="Image" src="https://github.com/user-attachments/assets/cb7fe48a-812a-498d-a117-ab839721d72b" />
+</p>
 
 ### Erros mais relevantes
 
@@ -168,7 +176,17 @@ A estratégia de despacho determina quais erros são mais prejudiciais e quais p
 
 Por isso, a avaliação foi além da quantidade total de acertos e passou a considerar o impacto dos diferentes tipos de erro.
 
-### 3. A demanda apresenta distribuição desbalanceada
+### 3. A demanda segue um padrão cíclico ao longo do dia
+
+<p align="center">
+  <img width="700" height="550" alt="Image" src="https://github.com/user-attachments/assets/dd4577f7-5d0c-4b3b-a21f-a1ea022db439" />
+</p>
+
+A demanda apresenta dois picos claros de proporção de demanda **Alta**: um pela manhã e outro no início da noite, com um vale marcante durante a madrugada, por volta das 4h às 6h. A demanda **Média** se mantém como a categoria predominante na maior parte do dia, enquanto a demanda **Baixa** apresenta maior variação ao longo das horas.
+
+Esse comportamento cíclico e não linear ajuda a explicar por que `HourOfDay` se mostrou, junto com `Region`, um dos preditores mais relevantes do projeto. Também ajuda a interpretar a dificuldade do método `fscmrmr` em capturar a importância dessa variável, uma vez que sua relação com a demanda não segue um padrão monotônico. 
+
+### 4. A demanda apresenta distribuição desbalanceada
 
 <p align="center">
   <img width="722" height="432" alt="Image" src="https://github.com/user-attachments/assets/3eaf866a-cae2-4df3-ad2a-fae3f987a7ab" />
@@ -176,9 +194,9 @@ Por isso, a avaliação foi além da quantidade total de acertos e passou a cons
 
 A variável `Demanda` foi dividida em três categorias:
 
-- **Baixo:** `NetPickups < 0`
-- **Médio:** `0 ≤ NetPickups < 15`
-- **Alto:** `NetPickups ≥ 15`
+- **Baixa:** `NetPickups < 0`
+- **Média:** `0 ≤ NetPickups < 15`
+- **Alta:** `NetPickups ≥ 15`
 
 No conjunto agregado, a distribuição foi:
 
@@ -186,9 +204,9 @@ No conjunto agregado, a distribuição foi:
 - **Média:** 53,0%
 - **Alta:** 15,4%
 
-A classe Média é a mais frequente, enquanto Alta representa a menor parcela das observações.
+A classe **Média** é a mais frequente, enquanto **Alta** representa a menor parcela das observações. Essa distribuição deve ser considerada na avaliação dos modelos, já que a acurácia geral pode não refletir igualmente o desempenho em todas as classes.
 
-### 4. Os recursos precisam estar disponíveis antes da decisão
+### 5. Os recursos precisam estar disponíveis antes da decisão
 
 O conjunto final de preditores utilizado na modelagem foi composto por:
 
@@ -201,7 +219,7 @@ O conjunto final de preditores utilizado na modelagem foi composto por:
 
 Variáveis como distância média, duração média e tarifa média foram excluídas do conjunto final por apresentarem risco de **circularidade**, uma vez que dependem das mesmas viagens utilizadas para definir `NetPickups` e `Demanda`. Além disso, essas variáveis apresentavam valores ausentes em parte das observações.
 
-### 5. A melhor solução depende da decisão que queremos apoiar
+### 6. A melhor solução depende da decisão que queremos apoiar
 
 O principal aprendizado do projeto é que **Machine Learning deve ser avaliado dentro do contexto da decisão que ele pretende apoiar**.
 
