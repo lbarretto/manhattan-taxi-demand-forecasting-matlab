@@ -27,6 +27,46 @@ Os resultados mostram que o **Cenário 2, baseado em custo customizado, é a abo
 
 ---
 
+# 📑 Sumário
+
+- [📋 Resumo Executivo](#-resumo-executivo)
+- [📌 Contexto do Projeto](#-contexto-do-projeto)
+- [🎯 Problema de Negócio](#-problema-de-negócio)
+  - [🗺️ Regiões analisadas](#️-regiões-analisadas)
+- [💡 Solução / Recomendação](#-solução--recomendação)
+  - [Cenário 1 — Modelo Baseline](#cenário-1--modelo-baseline)
+  - [Cenário 2 — Modelo com Custo Customizado](#cenário-2--modelo-com-custo-customizado)
+  - [Recomendação](#recomendação)
+- [📈 Impacto](#-impacto)
+  - [O que esse resultado significa?](#o-que-esse-resultado-significa)
+  - [Nota sobre o impacto financeiro](#nota-sobre-o-impacto-financeiro)
+- [📊 Principais Resultados](#-principais-resultados)
+  - [Desempenho geral](#desempenho-geral)
+  - [Erros mais relevantes](#erros-mais-relevantes)
+  - [Impacto financeiro estimado](#impacto-financeiro-estimado)
+- [🧠 Principais Insights](#-principais-insights)
+  - [1. Acurácia não conta toda a história](#1-acurácia-não-conta-toda-a-história)
+  - [2. O contexto de negócio deve influenciar a avaliação do modelo](#2-o-contexto-de-negócio-deve-influenciar-a-avaliação-do-modelo)
+  - [3. A demanda segue um padrão cíclico ao longo do dia](#3-a-demanda-segue-um-padrão-cíclico-ao-longo-do-dia)
+  - [4. A demanda apresenta distribuição desbalanceada](#4-a-demanda-apresenta-distribuição-desbalanceada)
+  - [5. Os recursos precisam estar disponíveis antes da decisão](#5-os-recursos-precisam-estar-disponíveis-antes-da-decisão)
+  - [6. A melhor solução depende da decisão que queremos apoiar](#6-a-melhor-solução-depende-da-decisão-que-queremos-apoiar)
+- [🏗️ Pipeline do Projeto](#️-pipeline-do-projeto)
+- [🔎 Como o Projeto foi Desenvolvido](#-como-o-projeto-foi-desenvolvido)
+  - [Módulo 01: Importar e explorar os dados](#módulo-01-importar-e-explorar-os-dados)
+  - [Módulo 02: Criar e avaliar recursos](#módulo-02-criar-e-avaliar-recursos)
+  - [Módulo 03: Aplicar o aprendizado de máquina](#módulo-03-aplicar-o-aprendizado-de-máquina)
+- [▶️ Como Executar o Projeto](#️-como-executar-o-projeto)
+  - [Pré-requisitos](#pré-requisitos)
+  - [📦 Arquivos necessários](#-arquivos-necessários)
+  - [📥 Dados de viagens](#-dados-de-viagens)
+  - [🚀 Passo a passo](#-passo-a-passo)
+- [🚀 Próximas Etapas](#-próximas-etapas)
+- [👤 Autor](#-autor)
+
+
+---
+
 ## 📌 Contexto do Projeto
 
 Este projeto foi desenvolvido como **desafio final da formação "Especialização em Ciência de Dados Prática com MATLAB"**, oferecida pela **MathWorks por meio do Coursera**.
@@ -379,6 +419,8 @@ Por fim, os erros mais relevantes são convertidos em **perdas financeiras estim
 
 > A estrutura acima representa a organização recomendada para o repositório. Os nomes e diretórios podem ser ajustados de acordo com a organização final dos arquivos no GitHub.
 
+
+
 ---
 
 ## ▶️ Como Executar o Projeto
@@ -402,11 +444,11 @@ O projeto depende de alguns arquivos auxiliares para realizar a importação, pr
 
 | Arquivo | Descrição |
 |---|---|
-| [2015 Bank Holidays](./data/2015%20Bank%20Holidays.csv) | Lista de feriados utilizada para identificar períodos de feriado durante a criação dos recursos temporais. |
+| [2015 Bank Holidays.csv](./data/reference/2015%20Bank%20Holidays.csv) | Lista de feriados utilizada para identificar períodos de feriado durante a criação dos recursos temporais. |
+| [Taxi Regions and Zones.csv](./data/reference/Taxi%20Regions%20and%20Zones.csv) | Arquivo de referência utilizado para relacionar as zonas de táxi às seis regiões consideradas no projeto. |
 | [addTaxiZones.mlx](./src/addTaxiZones.mlx) | Função fornecida durante o curso utilizada para adicionar as zonas de coleta e desembarque às viagens de táxi. |
 | [basicPreprocessing.mlx](./src/basicPreprocessing.mlx) | Executa a rotina de limpeza e preparação baseline dos dados. |
 | [importTaxiDataWithoutCleaning.mlx](./src/importTaxiDataWithoutCleaning.mlx) | Responsável pela importação dos arquivos mensais de viagens sem aplicar a etapa inicial de limpeza. |
-| [Taxi Regions and Zones](./data/Taxi%20Regions%20and%20Zones.csv) | Arquivo de referência utilizado para relacionar as zonas de táxi às seis regiões consideradas no projeto. |
 
 Além desses arquivos, o pipeline utiliza os **dados históricos de viagens de táxi amarelo de 2015**, organizados nos 12 arquivos mensais utilizados na etapa de importação.
 
@@ -523,4 +565,10 @@ Engenheiro de Produção | Data Science | Machine Learning | Cloud Computing
 
 <p align="center">
   <sub>Projeto desenvolvido como desafio final da Especialização em Ciência de Dados Prática com MATLAB.</sub>
+</p>
+
+<p align="center">
+  <a href="#-manhattan-taxi-demand-forecasting" style="text-decoration:none;">
+    ⬆️ Voltar ao início
+  </a>
 </p>
